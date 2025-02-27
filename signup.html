@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - Soulful Journeys India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://www.example.com/monument-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(0.7) contrast(1.2);
+            animation: fadeIn 2s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: rgba(13, 110, 253, 0.8); /* Blue Tint */
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: absolute;
+            top: 0;
+            animation: slideInHeader 1s ease-in-out;
+        }
+
+        @keyframes slideInHeader {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ffcc00; /* Gold Accent */
+        }
+
+        header p {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 450px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            animation: slideInForm 1s ease-out;
+            backdrop-filter: blur(10px); /* Optional: Adds a blurred effect behind the form */
+        }
+
+        @keyframes slideInForm {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            transition: border-color 0.3s ease;
+            background-color: #f0f0f0; /* Light grey background for inputs */
+        }
+
+        .input-group input:focus {
+            border-color: #ffcc00; /* Gold focus color */
+            outline: none;
+        }
+
+        .input-group input[type="submit"] {
+            background-color: #ff9900; /* Warm Orange for CTA */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+            border-radius: 6px;
+        }
+
+        .input-group input[type="submit"]:hover {
+            background-color: #e68a00; /* Darker Orange on Hover */
+        }
+
+        .input-group a {
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .input-group a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: rgba(13, 110, 253, 0.8); /* Blue Tint */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .cta-btn {
+            padding: 10px 20px;
+            background-color: #ff9900;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #e68a00;
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Soulful Journeys India</h1>
+        <p>Your gateway to unforgettable travel experiences in India</p>
+    </header>
+
+    <div class="container">
+        <h2>Join the Journey</h2>
+        <form action="/signup" method="POST">
+            <!-- Full Name -->
+            <div class="input-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="input-group">
+                <input type="submit" value="Sign Up">
+            </div>
+
+            <!-- Login Redirect -->
+            <div class="input-group">
+                <p>Already have an account? <a href="/login">Login here</a></p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Soulful Journeys India. All rights reserved. | <a href="/">Privacy Policy</a></p>
+    </footer>
+
+</body>
+
+</html>
